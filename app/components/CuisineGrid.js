@@ -3,14 +3,14 @@
 import Link from 'next/link';
 
 const cuisines = [
-  { name: 'Italian', image: 'https://via.placeholder.com/300?text=Italian' },
-  { name: 'Mexican', image: 'https://via.placeholder.com/300?text=Mexican' },
-  { name: 'Indian', image: 'https://via.placeholder.com/300?text=Indian' },
-  { name: 'Chinese', image: 'https://via.placeholder.com/300?text=Chinese' },
-  { name: 'Japanese', image: 'https://via.placeholder.com/300?text=Japanese' },
-  { name: 'French', image: 'https://via.placeholder.com/300?text=French' },
-  { name: 'Thai', image: 'https://via.placeholder.com/300?text=Thai' },
-  { name: 'Spanish', image: 'https://via.placeholder.com/300?text=Spanish' },
+  { name: 'Italian', image: '/italian.jpg' },
+  { name: 'Mexican', image: '/mexican.jpg' },
+  { name: 'Indian', image: '/indian.jpg' },
+  { name: 'Chinese', image: '/chinese.jpg' },
+  { name: 'Japanese', image: '/japanese.jpg' },
+  { name: 'French', image: '/french.jpg' },
+  { name: 'Thai', image: '/thai.jpg' },
+  { name: 'Spanish', image: '/spanish.jpg' },
 ];
 
 const CuisineGrid = () => {
