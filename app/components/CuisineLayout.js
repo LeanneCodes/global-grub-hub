@@ -17,8 +17,7 @@ export default function CuisineLayout({ children, title, description, image }) {
             </div>
           </div>
           <div id="recipe-list" className="space-y-4 mt-8">
-            {/* Placeholder for recipes */}
-            <p className="text-lg text-gray-200">Recipes will be displayed here.</p>
+            <hr className='border-white' />
           </div>
         </section>
         {children}

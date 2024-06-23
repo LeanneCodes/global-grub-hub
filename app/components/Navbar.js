@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img className="h-auto w-60 mt-0" src="/logo.png" alt="Global Grub Hub Logo" />
+              <img className="h-auto w-80 mt-2" src="/logo.png" alt="Global Grub Hub Logo" />
             </div>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-4">
