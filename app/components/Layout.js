@@ -27,9 +27,9 @@ export default function Layout({ children, homepage = false, title, description 
       <main className="flex-grow p-4">
         {homepage ? (
           <section>
-            <div className="flex flex-col items-center justify-center h-[70vh]">
+            <div className="flex flex-col items-center justify-center min-h-[90vh]">
               <h1 className="text-7xl md:text-9xl font-bold text-center">Make it Delicious</h1>
-              <p className="mt-4 text-gray-700 px-10 text-center">
+              <p className="my-12 text-xl md:text-2xl text-gray-700 px-40 text-center">
                 Global Grub Hub is your top destination for exploring popular cuisines from
                 around the world in one spot. Discover diverse international dishes, from
                 Italian to Mexican, Indian to Chinese, and more. Find new recipes, culinary

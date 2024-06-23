@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 body {
-  @apply bg-default-bg text-white;
+  background-color: #00BFFF;
+  color: white;
 }

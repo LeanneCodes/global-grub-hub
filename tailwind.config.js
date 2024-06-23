@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
@@ -7,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'default-bg': '#06413d',
+        'coral-orange': '#FFA500',
+        'royal-blue': '#4169E1',
       },
     },
   },
