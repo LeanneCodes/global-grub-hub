@@ -3,7 +3,7 @@ import { FaTimes, FaHeart, FaRegHeart } from 'react-icons/fa';
 const Modal = ({ recipe, onClose, isFavorite, handleFavorite }) => {
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg p-4 w-4/5 max-w-2xl relative overflow-y-auto max-h-full">
+      <div className="bg-white rounded-lg p-4 w-4/5 max-w-6xl relative overflow-y-auto max-h-[90%]">
         <button className="absolute top-4 right-4 text-gray-500 hover:text-gray-700" onClick={onClose}>
           <FaTimes size={24} />
         </button>
