@@ -1,5 +1,5 @@
-import cuisines from "@/app/data/cuisines";
-import Layout from "@/app/components/Layout";
+import cuisines from '@/app/data/cuisines';
+import CuisineLayout from '@/app/components/CuisineLayout';
 
 const CuisinePage = ({ params }) => {
   const { name } = params;
@@ -8,18 +8,22 @@ const CuisinePage = ({ params }) => {
 
   if (!cuisine) {
     return (
-      <Layout>
+      <CuisineLayout title="Cuisine not found" description="">
         <div className="container mx-auto p-4">
-          <h1 className="text-4xl font-bold mb-4">Cuisine not found</h1>
+          <h1 className="text-4xl font-bold mb-4 text-white">Cuisine not found</h1>
         </div>
-      </Layout>
+      </CuisineLayout>
     );
   }
 
   return (
-    <Layout title={`${cuisine.name} Cuisine`} description={cuisine.description}>
-      {/* You can add more specific content here if needed */}
-    </Layout>
+    <CuisineLayout 
+      title={`${cuisine.name} Cuisine`} 
+      description={cuisine.description} 
+      image={`/${cuisine.name.toLowerCase()}.jpg`}
+    >
+      {/* Add more specific content here if needed */}
+    </CuisineLayout>
   );
 };
 
