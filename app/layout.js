@@ -5,8 +5,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Global Gub Hub</title>
-        {/* <link rel="icon" href="/LG_favicon.png" /> */}
+        <link rel="icon" href="/favicon.png" />
+        <title>Global Grub Hub</title>
       </head>
       <body>
         {children}

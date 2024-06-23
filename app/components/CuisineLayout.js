@@ -12,7 +12,7 @@ export default function CuisineLayout({ children, title, description, image }) {
           <div className="flex flex-col md:flex-row items-center justify-center md:space-x-8">
             <img src={image} alt={title} className="w-full md:w-1/2 rounded-lg shadow-lg object-cover" />
             <div className="text-center md:text-left md:flex md:flex-col md:justify-center md:w-1/2">
-              <h1 className="text-4xl font-bold mb-4 text-white">{title}</h1>
+              <h1 className="text-4xl font-bold my-10 md:my-4 text-white">{title}</h1>
               <p className="text-lg text-gray-200">{description}</p>
             </div>
           </div>

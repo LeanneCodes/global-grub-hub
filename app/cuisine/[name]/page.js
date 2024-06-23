@@ -21,9 +21,9 @@ const CuisinePage = ({ params }) => {
 
   useEffect(() => {
     if (cuisine) {
-      fetchRecipes(name).then(setRecipes);
+      fetchRecipes(cuisine.name).then(setRecipes);
     }
-  }, [name, cuisine]);
+  }, [cuisine]);
 
   useEffect(() => {
     const savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];

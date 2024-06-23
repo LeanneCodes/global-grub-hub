@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 
@@ -35,41 +33,42 @@ const Navbar = () => {
   }, [dropdownOpen]);
 
   return (
-    <nav className="bg-coral-orange rounded-b-lg shadow-lg">
+    <nav className="bg-orange-500 md:rounded-b-lg shadow-lg h-[100px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-full">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img className="h-auto w-80 mt-2" src="/logo.png" alt="Global Grub Hub Logo" />
+              <Link href="/" passHref>
+                <img className="h-auto w-60 cursor-pointer mt-1" src="/logo.png" alt="Global Grub Hub Logo" />
+              </Link>
             </div>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-4">
-            <Link href="/" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium text-xl">Home</Link>
+            <Link href="/" className="text-white hover:scale-105 hover:animate-shake px-3 py-2 rounded-md font-medium text-xl">Home</Link>
             <div className="relative" ref={dropdownRef}>
               <button 
                 onClick={toggleDropdown} 
-                className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium text-xl"
+                className="text-white hover:scale-105 hover:animate-shake px-3 py-2 rounded-md font-medium text-xl"
               >
                 Cuisine
               </button>
               {dropdownOpen && (
-                <div className="absolute left-0 mt-2 w-48 bg-coral-orange rounded z-10">
-                  <Link href="/cuisine/italian" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Italian</Link>
-                  <Link href="/cuisine/mexican" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Mexican</Link>
-                  <Link href="/cuisine/indian" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Indian</Link>
-                  <Link href="/cuisine/chinese" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Chinese</Link>
-                  <Link href="/cuisine/chinese" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Japanese</Link>
-                  <Link href="/cuisine/chinese" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Spanish</Link>
-                  <Link href="/cuisine/chinese" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Thai</Link>
-                  <Link href="/cuisine/chinese" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">French</Link>
-                  {/* Add more cuisines as needed */}
+                <div className="absolute left-0 mt-2 w-48 bg-orange-500 rounded z-50">
+                  <Link href="/cuisine/italian" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Italian</Link>
+                  <Link href="/cuisine/mexican" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Mexican</Link>
+                  <Link href="/cuisine/indian" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Indian</Link>
+                  <Link href="/cuisine/chinese" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Chinese</Link>
+                  <Link href="/cuisine/japanese" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Japanese</Link>
+                  <Link href="/cuisine/spanish" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Spanish</Link>
+                  <Link href="/cuisine/thai" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Thai</Link>
+                  <Link href="/cuisine/french" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">French</Link>
                 </div>
               )}
             </div>
-            <Link href="/favourited-recipes" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium text-xl">Favourited Recipes</Link>
+            <Link href="/favourited-recipes" className="text-white hover:scale-105 hover:animate-shake px-3 py-2 rounded-md font-medium text-xl">Favourited Recipes</Link>
           </div>
-          <div className="flex md:hidden">
-            <button onClick={toggleMenu} className="bg-coral-orange text-gray-700 hover:text-coral-orange hover:bg-white p-2 rounded-md">
+          <div className="flex md:hidden z-50">
+            <button onClick={toggleMenu} className="bg-orange-500 text-white p-2 rounded-md">
               <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
@@ -79,31 +78,30 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden bg-orange-500 z-50 relative">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link href="/" className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium">Home</Link>
+            <Link href="/" className="block text-white hover:text-gray-800 px-3 py-2 rounded-md font-medium text-xl">Home</Link>
             <div className="relative" ref={dropdownRef}>
               <button 
                 onClick={toggleDropdown} 
-                className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium w-full text-left"
+                className="block text-white hover:text-gray-800 px-3 py-2 rounded-md font-medium w-full text-left text-xl"
               >
                 Cuisine
               </button>
               {dropdownOpen && (
-                <div className="mt-1 bg-coral-orange z-10">
-                  <Link href="/cuisine/italian" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Italian</Link>
-                  <Link href="/cuisine/mexican" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Mexican</Link>
-                  <Link href="/cuisine/indian" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Indian</Link>
-                  <Link href="/cuisine/chinese" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Chinese</Link>
-                  <Link href="/cuisine/chinese" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Japanese</Link>
-                  <Link href="/cuisine/chinese" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Spanish</Link>
-                  <Link href="/cuisine/chinese" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">Thai</Link>
-                  <Link href="/cuisine/chinese" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-lg">French</Link>
-                  {/* Add more cuisines as needed */}
+                <div className="mt-1 bg-orange-500 z-50 relative">
+                  <Link href="/cuisine/italian" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Italian</Link>
+                  <Link href="/cuisine/mexican" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Mexican</Link>
+                  <Link href="/cuisine/indian" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Indian</Link>
+                  <Link href="/cuisine/chinese" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Chinese</Link>
+                  <Link href="/cuisine/japanese" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Japanese</Link>
+                  <Link href="/cuisine/spanish" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Spanish</Link>
+                  <Link href="/cuisine/thai" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">Thai</Link>
+                  <Link href="/cuisine/french" className="block px-4 py-2 text-white hover:text-gray-800 text-lg">French</Link>
                 </div>
               )}
             </div>
-            <Link href="/favourited-recipes" className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium">Favourited Recipes</Link>
+            <Link href="/favourited-recipes" className="block text-white hover:text-gray-800 px-3 py-2 rounded-md font-medium text-xl">Favourited Recipes</Link>
           </div>
         </div>
       )}
