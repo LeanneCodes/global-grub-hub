@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Global Grub Hub
 
-## Getting Started
+Global Grub Hub is a recipe collection application that allows users to explore popular cuisines from around the world in one spot. Discover diverse international dishes, find new recipes, and experience global flavors all in one place.
 
-First, run the development server:
+## Application Appearance
+![Web Application](/public/globalgrubhub.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Environment Variables](#environment-variables)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Browse recipes by cuisine
+- View detailed recipe information, including ingredients, instructions, and nutrition facts
+- Favorite recipes to save them for later
+- Responsive design for mobile and desktop
 
-## Learn More
+## Upcoming Features
 
-To learn more about Next.js, take a look at the following resources:
+- Users will be able to search for recipes within the Tasty API
+- Users can share recipes with friends and family via social media or plain links
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Next.js](https://nextjs.org/) - React framework for server-side rendering
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Vercel](https://vercel.com/) - Hosting platform
+- [Tasty API](https://rapidapi.com/apidojo/api/tasty) - API for fetching recipes
 
-## Deploy on Vercel
+## Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```bash
+    git clone https://github.com/yourusername/global-grub-hub.git
+    cd global-grub-hub
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+## Usage
+
+1. Create a `.env.local` file in the root directory and add your Tasty API key:
+
+    ```env
+    NEXT_PUBLIC_TASTY_API_KEY=your_api_key_here
+    ```
+
+2. Run the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Environment Variables
+
+The project uses environment variables to manage sensitive information. Make sure to set the following variables in your `.env.local` file:
+
+- `NEXT_PUBLIC_TASTY_API_KEY`: Your Tasty API key.
+
+## Deployment
+
+The project is configured to be deployed on [Vercel](https://vercel.com/). Follow these steps to deploy:
+
+1. Install the Vercel CLI globally:
+
+    ```bash
+    npm install -g vercel
+    ```
+
+2. Log in to your Vercel account:
+
+    ```bash
+    vercel login
+    ```
+
+3. Initialize the project with Vercel:
+
+    ```bash
+    vercel
+    ```
+
+    Follow the prompts to link your project to a Vercel project.
+
+4. Set up environment variables in the Vercel dashboard:
+
+    - Go to the [Vercel Dashboard](https://vercel.com/dashboard).
+    - Select your project.
+    - Navigate to the "Settings" tab.
+    - Under "Environment Variables", add `NEXT_PUBLIC_TASTY_API_KEY` with your API key value.
+
+5. Deploy the project:
+
+    ```bash
+    vercel --prod
+    ```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
