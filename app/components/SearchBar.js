@@ -18,7 +18,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <form className="mt-10 w-4/5 mx-auto" onSubmit={handleSearchSubmit}>
+    <form className="mt-4 w-4/5 mx-auto" onSubmit={handleSearchSubmit}>
       <div className="flex items-center bg-white rounded-full py-2 px-4 shadow-lg">
         <input
           type="text"
