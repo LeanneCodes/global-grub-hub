@@ -20,7 +20,7 @@ const RecipeCard = ({ recipe, isFavorite, handleFavorite, handleModalOpen }) => 
         <div className="flex justify-between items-center">
           <button 
             onClick={() => handleModalOpen(recipe)}
-            className="text-blue-500 hover:underline"
+            className="text-orange-500 font-bold hover:text-blue-500"
           >
             See More
           </button>
